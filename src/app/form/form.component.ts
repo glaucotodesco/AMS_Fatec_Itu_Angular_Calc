@@ -13,8 +13,13 @@ export class FormComponent {
     sum : number = 0;
 
 
-   onClickSum(){
-      this.sum = this.num1 + this.num2;
+   onClick(op: string){
+      switch(op){
+         case '+': this.sum = this.num1 + this.num2; break
+         case '-': this.sum = this.num1 - this.num2; break
+         case '*': this.sum = this.num1 * this.num2; break
+         case '/': this.sum = this.num1 / this.num2; break
+      }
    } 
 
 
